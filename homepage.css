@@ -1,0 +1,9 @@
+body{background-color:pink;}
+
+img.floatLeft{
+	float:left;
+	margin:10px;
+	border:solid 3px;
+}
+
+body{font:Cambria; font-size:14pt;}

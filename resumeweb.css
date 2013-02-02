@@ -1,0 +1,27 @@
+h1{
+font-size:18pt; font-family: Cambria;
+  }
+
+body{
+font-family: Cambria;
+	}
+
+.sectionhead{
+font-size:12pt;font-style:italic;
+	}
+
+.university,.title{
+font-weight:bold;
+	}
+
+.p1,.p2, .classes, .familiar, .proficient{
+font-size:12pt; position:absolute; left:10%;
+	}
+	
+ul{
+margin:0;
+	}
+	
+.familiar {
+    position:absolute; left:30%;
+}

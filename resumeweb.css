@@ -1,27 +1,29 @@
 h1{
-font-size:18pt; font-family: Cambria;
-  }
+	font-size:18pt; 
+	font-family: Cambria;
+}
 
 body{
-font-family: Cambria;
-	}
+	font-family: Cambria;
+	/*margin-left: 5%;*/
+	font-size: 12pt;
+}
 
-.sectionhead{
-font-size:12pt;font-style:italic;
-	}
+div{
+	margin-left: 5%;
+}
 
 .university,.title{
-font-weight:bold;
-	}
+	font-weight:bold;
+}
 
-.p1,.p2, .classes, .familiar, .proficient{
-font-size:12pt; position:absolute; left:10%;
-	}
+.sectionhead{
+	font-size:12pt;
+	font-style:italic;
+	margin-left:0;
+}	
 	
 ul{
-margin:0;
-	}
-	
-.familiar {
-    position:absolute; left:30%;
+	margin:0%; 
 }
+	

@@ -1,5 +1,16 @@
 
-h2{font-size:16pt; font:Cambria; position:absolute; left:22%;}
-img.jumbo{float:left; margin:10px;
+h2{
+	font-size:16pt; font-family:Cambria; position:absolute; left:22%;
+	color:indigo;
+	}
+
+
+body{
+ margin-left:0%; font-size:12pt; font-family:Cambria; background-color:silver;
+ color:indigo;
+ }
+ 
+ img.jumbo{
+	float:left; margin:10px; border:solid 3px; position:inside; border-color:brown;
+	
 }
-body{ position:realtive; font-size:12pt; font:Cambria;}

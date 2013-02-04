@@ -7,3 +7,5 @@ img.floatLeft{
 }
 
 body{font:Cambria; font-size:14pt;}
+
+h1{border-bottom:3px solid; text-decoration:underline;}

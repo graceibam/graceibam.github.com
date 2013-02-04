@@ -1,0 +1,27 @@
+.index-body{background-color:pink;
+			font:Cambria; 
+			font-size:14pt;
+}
+
+img.floatLeft{
+	float:left;
+	margin:10px;
+	border:solid 3px;
+}
+
+h1{text-decoration:underline;}
+
+.bio-body{
+ margin-left:0%; font-size:12pt; font-family:Cambria; background-color:silver;
+ color:indigo;
+ }
+ 
+ h2{
+	font-size:16pt; font-family:Cambria; position:absolute; left:22%;
+	color:indigo;
+	}
+	
+ img.jumbo{
+	float:left; margin:10px; border:solid 3px; position:inside; border-color:brown;
+	
+}

@@ -35,14 +35,14 @@ function showPosition(position)
 		g_lat=position.coords.latitude;
 		g_lng=position.coords.longitude;	
 		g_location=new google.maps.LatLng(g_lat, g_lng);
-		console.log(g_location);
+
 		g_marker=new google.maps.Marker({
 			position:g_location,
 			title: "Here I am!",
 			});
 		g_marker.setMap(map);
 		
-
+	map.panTo(g_location);
 		
 	CharactersInit()	
 	StationLocations()
@@ -226,7 +226,6 @@ for(i=0; i<L; i++){
 	addInfoWindow(sta_marker, stationWindows(i));	
 	
 	dist=distance(g_location.lat(), g_location.lng(), station_info[i]['location'].lat(), station_info[i]['location'].lng());
-	console.log(dist);
 	
 	if(dist<closestStation){
 		closestStation=dist;

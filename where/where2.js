@@ -44,14 +44,8 @@ function getMyLocation() {
 				
 			g_location=new google.maps.LatLng(g_lat, g_lng)
 			console.log(g_location);
-            });
-        }
-		
-        else {
-            alert("Geolocation is not supported by your web browser.  What a shame!");
-        }
-		
-	    g_marker=new google.maps.Marker({
+			
+		g_marker=new google.maps.Marker({
 			position:g_location,
 			title:"Here I am!",
 			});
@@ -60,6 +54,14 @@ function getMyLocation() {
 			
 		g_message="Here I am!"+"<br/><br/>"+"My Location: "+"<br/>"+g_lat+" Latitude"+"<br/>"+g_lng+" Longitude";
 		addInfoWindow(g_marker, g_message);
+            });
+        }
+		
+        else {
+            alert("Geolocation is not supported by your web browser.  What a shame!");
+        }
+		
+
 		
     }
   

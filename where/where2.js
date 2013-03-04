@@ -32,22 +32,29 @@
   }
 
 function getMyLocation() {
-        lat = 0;
-        lng = 0;
+        g_lat = 0;
+        g_lng = 0;
         if (navigator.geolocation) {
             // the navigator.geolocation object is supported on your browser
             navigator.geolocation.getCurrentPosition(function(position) {
                 lat = position.coords.latitude;
                 lng = position.coords.longitude;
-               // elem = document.getElementById("loc");
-                //elem.innerHTML = "<h1>You are in " + lat + ", " + lng + "</h1>";
-			console.log(lat);
-			console.log(lng);
+				
+			g_location=new google.maps.LatLng(g_lat, g_lng)
+			
+			var g_marker=new google.maps.Marker({
+			position:g_location,
+			title:"Here I am!",
+			});
+			
+			g_message="Here I am!"+"<br/><br/>"+"My Location: "+"<br/>"+g_lat+" Latitude"+"<br/>"+g_lng+" Longitude";
+			addInfoWindow(g_marker, g_message);
             });
         }
         else {
             alert("Geolocation is not supported by your web browser.  What a shame!");
         }
+		
     }
   
 function toRad(deg){

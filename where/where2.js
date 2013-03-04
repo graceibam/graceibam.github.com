@@ -32,7 +32,7 @@ function getMyLocation() {
                 g_lat = position.coords.latitude;
                 g_lng = position.coords.longitude;
 				
-		var g_location=new google.maps.LatLng(g_lat, g_lng);
+		g_location=new google.maps.LatLng(g_lat, g_lng);
 		console.log(g_location);
 		
 		map.panTo(g_location);
@@ -138,7 +138,7 @@ function characters(str){
 		
 		wc_marker.setMap(map);
 		
-		windowMsg=blurb+"<br/>"+"Distance from you: "+ distance(g_location.lat(), g_location.lng(), latt, lntude)+" miles";
+		windowMsg=blurb+"<br/>"+"Distance from you: "+ distance(g_lat, g_lng, latt, lntude)+" miles";
 		addInfoWindow(wc_marker, windowMsg);	
 		}
 }

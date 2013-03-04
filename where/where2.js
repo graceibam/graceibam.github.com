@@ -47,7 +47,7 @@ function showPosition(position)
 	CharactersInit()	
 	StationLocations()
 	
-	g_message="Here you are!"+"<br/><br/>"+"My Location: "+"<br/>"+g_lat+" Latitude"+"<br/>"+g_lng+" Longitude <br/><br/>The Closest Station to you is "+csName+" at"+dist+" miles away";
+	g_message="Here you are!"+"<br/><br/>"+"My Location: "+"<br/>"+g_lat+" Latitude"+"<br/>"+g_lng+" Longitude <br/><br/>The Closest Station to you is "+csName+" at "+dist+" miles away";
 	addInfoWindow(g_marker, g_message);
 		
     }
@@ -226,6 +226,7 @@ for(i=0; i<L; i++){
 	addInfoWindow(sta_marker, stationWindows(i));	
 	
 	dist=distance(g_location.lat(), g_location.lng(), station_info[i]['location'].lat(), station_info[i]['location'].lng());
+	console.log(dist);
 	
 	if(dist<closestStation){
 		closestStation=dist;

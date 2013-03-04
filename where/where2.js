@@ -37,11 +37,12 @@ function getMyLocation() {
         if (navigator.geolocation) {
             // the navigator.geolocation object is supported on your browser
             navigator.geolocation.getCurrentPosition(function(position) {
-                lat = position.coords.latitude;
-                lng = position.coords.longitude;
+                g_lat = position.coords.latitude;
+                g_lng = position.coords.longitude;
 				
 			g_location=new google.maps.LatLng(g_lat, g_lng)
 			console.log(g_location);
+			
 			
 			var g_marker=new google.maps.Marker({
 			position:g_location,

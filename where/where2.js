@@ -47,7 +47,7 @@ function showPosition(position)
 	CharactersInit()	
 	StationLocations()
 	
-	g_message="Here you are!"+"<br/><br/>"+"My Location: "+"<br/>"+g_lat+" Latitude"+"<br/>"+g_lng+" Longitude <br/><br/>The Closest Station to you is "+csName+" at "+dist+" miles away";
+	g_message="Here you are!"+"<br/><br/>"+"My Location: "+"<br/>"+g_lat+" Latitude"+"<br/>"+g_lng+" Longitude <br/><br/>The Closest Station to you is "+csName+" at "+closestStation+" miles away";
 	addInfoWindow(g_marker, g_message);
 		
     }

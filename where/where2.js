@@ -32,7 +32,7 @@ function getMyLocation() {
                 g_lat = position.coords.latitude;
                 g_lng = position.coords.longitude;
 				
-		g_location=new google.maps.LatLng(g_lat, g_lng)
+		g_location=new google.maps.LatLng(g_lat, g_lng);
 		console.log(g_location);
 		
 		map.panTo(g_location);

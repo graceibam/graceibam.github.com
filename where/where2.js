@@ -1,32 +1,17 @@
   
   function initialize() {
 	 centerOn=new google.maps.LatLng(42.413413, -71.119738);
-	//tom=new google.maps.LatLng(42.4060089, -71.1169065);
 
-    map = new google.maps.Map(document.getElementById("map_canvas"),
-        mapOptions);
-		
+
 	  var mapOptions = {
       center: centerOn,
       zoom: 13,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };	
 	
-	//var marker=new google.maps.Marker({
-	//position:me,
-	//});
+    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);	
 	
-	//var elsewhere=new google.maps.Marker({
-	//position: tom,
-	//});
-	
-	//marker.setMap(map);
-	//elsewhere.setMap(map);
-	
-	//distance(me.lat(), me.lng(), tom.lat(), tom.lng());
-	
-	CharactersInit()
-	
+	CharactersInit()	
 	StationLocations()	
 	getMyLocation()
 	
@@ -46,8 +31,8 @@ function getMyLocation() {
                 g_lat = position.coords.latitude;
                 g_lng = position.coords.longitude;
 				
-			g_location=new google.maps.LatLng(g_lat, g_lng)
-			console.log(g_location);
+		g_location=new google.maps.LatLng(g_lat, g_lng)
+		console.log(g_location);
 			
 		g_marker=new google.maps.Marker({
 			position:g_location,
@@ -155,7 +140,7 @@ function characters(str){
 		
 		
 		}
-		}
+}
 
 
 function addInfoWindow(marker, message) {

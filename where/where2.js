@@ -150,7 +150,7 @@ function characters(str){
 		
 		wc_marker.setMap(map);
 		
-		windowMsg=blurb+"<br/>"+"Distance from you: "+ distance(me.lat(), me.lng(), latt, lntude)+" miles";
+		windowMsg=blurb+"<br/>"+"Distance from you: "+ distance(g_location.lat(), g_location.lng(), latt, lntude)+" miles";
 		addInfoWindow(wc_marker, windowMsg);
 		
 		

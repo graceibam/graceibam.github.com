@@ -211,6 +211,10 @@ L=station_info.length;
 
 closestStation=1000000;
 
+mbtaReq= new XMLHttpRequest();
+mbtaReq.open("get", "http://mbtamap-cedar.herokuapp.com/mapper/redline.json", false);
+mbtaReq.send();
+
 for(i=0; i<L; i++){
 	var sta_marker=new google.maps.Marker({
 			position:station_info[i]['location'],
@@ -223,9 +227,7 @@ for(i=0; i<L; i++){
 	n_key=station_info[i]['nkey'];
 	s_key=station_info[i]['skey'];
 	
-	mbtaReq= new XMLHttpRequest();
-	mbtaReq.open("get", "http://mbtamap-cedar.herokuapp.com/mapper/redline.json", false);
-	mbtaReq.send();
+	
 	
 	var str=mbtaReq.responseText;
 	mbtaInfo = JSON.parse(str);

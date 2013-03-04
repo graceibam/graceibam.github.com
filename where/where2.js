@@ -52,7 +52,8 @@ function getMyLocation() {
         else {
             alert("Geolocation is not supported by your web browser.  What a shame!");
         }
-		
+		console.log(g_lat);
+		console.log(g_lng);
 
 		
     }

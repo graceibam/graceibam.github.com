@@ -31,6 +31,8 @@
 	getMyLocation()
   }
 
+  
+  
 function getMyLocation() {
          g_lat = 0;
          g_lng = 0;
@@ -49,10 +51,12 @@ function getMyLocation() {
             alert("Geolocation is not supported by your web browser.  What a shame!");
         }
 		
-		    g_marker=new google.maps.Marker({
+	    g_marker=new google.maps.Marker({
 			position:g_location,
 			title:"Here I am!",
 			});
+			
+		g_marker.setMap(map);
 			
 		g_message="Here I am!"+"<br/><br/>"+"My Location: "+"<br/>"+g_lat+" Latitude"+"<br/>"+g_lng+" Longitude";
 		addInfoWindow(g_marker, g_message);

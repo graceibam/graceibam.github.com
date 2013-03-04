@@ -233,7 +233,7 @@ for(i=0; i<L; i++){
 	mbtaInfo = JSON.parse(str);
 	l_mbta=mbtaInfo.length;
 	
-	windowMsg=station_info[g]['name']+"<br/><br/>";
+	windowMsg=station_info[i]['name']+"<br/><br/>";
 	
 	for(j=0; j<l_mbta; j++){
 		plat_key=mbtaInfo[j]['PlatformKey'];

@@ -26,7 +26,29 @@
 function getMyLocation() {
          g_lat = 0;
          g_lng = 0;
-        if (navigator.geolocation) {
+		 
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  else{alert("Geolocation not supported!");}
+  }
+function showPosition(position)
+  {
+		g_lat=position.coords.latitude;
+		g_lng=position.coords.longitude;	
+		g_location=new google.maps.LatLng(g_lat, g_lng);
+		console.log(g_location);
+		g_marker=new google.maps.Marker({
+			position:g_location,
+			title: "Here I am!",
+			});
+		g_marker.setMap(map);
+		
+		g_message="Here I am!"+"<br/><br/>"+"My Location: "+"<br/>"+g_lat+" Latitude"+"<br/>"+g_lng+" Longitude";
+		addInfoWindow(g_marker, g_message);
+  }
+        /* if (navigator.geolocation) {
             // the navigator.geolocation object is supported on your browser
             navigator.geolocation.getCurrentPosition(function(position) {
                 g_lat = position.coords.latitude;
@@ -54,7 +76,7 @@ function getMyLocation() {
         }
 		console.log(g_lat);
 		console.log(g_lng);
-
+ */
 		
     }
   

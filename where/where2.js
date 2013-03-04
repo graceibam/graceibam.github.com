@@ -1,7 +1,7 @@
   
   function initialize() {
 	 me=new google.maps.LatLng(42.413413, -71.119738);
-	tom=new google.maps.LatLng(42.4060089, -71.1169065);
+	//tom=new google.maps.LatLng(42.4060089, -71.1169065);
     var mapOptions = {
       center: me,
       zoom: 13,
@@ -16,14 +16,14 @@
 	position:me,
 	});
 	
-	var elsewhere=new google.maps.Marker({
-	position: tom,
-	});
+	//var elsewhere=new google.maps.Marker({
+	//position: tom,
+	//});
 	
 	marker.setMap(map);
 	elsewhere.setMap(map);
 	
-	distance(me.lat(), me.lng(), tom.lat(), tom.lng());
+	//distance(me.lat(), me.lng(), tom.lat(), tom.lng());
 	
 	CharactersInit()
 	
@@ -41,6 +41,7 @@ function getMyLocation() {
                 lng = position.coords.longitude;
 				
 			g_location=new google.maps.LatLng(g_lat, g_lng)
+			console.log(g_location);
 			
 			var g_marker=new google.maps.Marker({
 			position:g_location,

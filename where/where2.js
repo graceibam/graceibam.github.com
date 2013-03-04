@@ -4,8 +4,8 @@
   var g_lng
   
   function initialize() {
+	 
 	 centerOn=new google.maps.LatLng(42.413413, -71.119738);
-
 
 	  var mapOptions = {
       center: centerOn,
@@ -16,12 +16,9 @@
     map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);	
 
 	getMyLocation()	
-	
-
 }
 
-  
-  
+   
 function getMyLocation() {
          g_lat = 0;
          g_lng = 0;
@@ -45,41 +42,15 @@ function showPosition(position)
 			});
 		g_marker.setMap(map);
 		
-		g_message="Here I am!"+"<br/><br/>"+"My Location: "+"<br/>"+g_lat+" Latitude"+"<br/>"+g_lng+" Longitude";
-		addInfoWindow(g_marker, g_message);
+
 		
 	CharactersInit()	
 	StationLocations()
-  }
-        /* if (navigator.geolocation) {
-            // the navigator.geolocation object is supported on your browser
-            navigator.geolocation.getCurrentPosition(function(position) {
-                g_lat = position.coords.latitude;
-                g_lng = position.coords.longitude;
-				
-		g_location=new google.maps.LatLng(g_lat, g_lng);
-		console.log(g_location);
+	
+	g_message="Here you are!"+"<br/><br/>"+"My Location: "+"<br/>"+g_lat+" Latitude"+"<br/>"+g_lng+" Longitude <br/><br/>The Closest Station to you is "+csName+" at"+dist+" miles away";
+	addInfoWindow(g_marker, g_message);
 		
-		map.panTo(g_location);
-			
-		g_marker=new google.maps.Marker({
-			position:g_location,
-			title:"Here I am!",
-			});
-			
-		g_marker.setMap(map);
-			
-		g_message="Here I am!"+"<br/><br/>"+"My Location: "+"<br/>"+g_lat+" Latitude"+"<br/>"+g_lng+" Longitude";
-		addInfoWindow(g_marker, g_message);
-            });
-        }
-		
-        else {
-            alert("Geolocation is not supported by your web browser.  What a shame!");
-        }
-		console.log(g_lat);
-		console.log(g_lng);
- */
+    }
 		
     
   
@@ -238,6 +209,8 @@ station_info=	[{'name':'Alewife Station', 'location':ale, 'nkey':'RALEN', 'skey'
 
 L=station_info.length;
 
+closestStation=1000000;
+
 for(i=0; i<L; i++){
 	var sta_marker=new google.maps.Marker({
 			position:station_info[i]['location'],
@@ -251,7 +224,13 @@ for(i=0; i<L; i++){
 	s_key=station_info[i]['skey'];
 	
 	addInfoWindow(sta_marker, stationWindows(i));	
-
+	
+	dist=distance(g_location.lat(), g_location.lng(), station_info[i]['location'].lat(), station_info[i]['location'].lng());
+	
+	if(dist<closestStation){
+		closestStation=dist;
+		csName=station_info[i]['name'];
+		}
 }
 
 var poly_line=new google.maps.Polyline({

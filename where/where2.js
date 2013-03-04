@@ -21,7 +21,7 @@
 	//});
 	
 	marker.setMap(map);
-	elsewhere.setMap(map);
+	//elsewhere.setMap(map);
 	
 	//distance(me.lat(), me.lng(), tom.lat(), tom.lng());
 	

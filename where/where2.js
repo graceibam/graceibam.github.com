@@ -209,6 +209,10 @@ station_info=	[{'name':'Alewife Station', 'location':ale, 'nkey':'RALEN', 'skey'
 
 L=station_info.length;
 
+mbtaReq= new XMLHttpRequest();
+mbtaReq.open("get", "http://mbtamap-cedar.herokuapp.com/mapper/redline.json", false);
+mbtaReq.send();
+
 closestStation=1000000;
 
 for(i=0; i<L; i++){
@@ -245,9 +249,7 @@ var poly_line=new google.maps.Polyline({
 }
 
 function stationWindows(g){
-	mbtaReq= new XMLHttpRequest();
-	mbtaReq.open("get", "http://mbtamap-cedar.herokuapp.com/mapper/redline.json", false);
-	mbtaReq.send();
+
 	
 	var str=mbtaReq.responseText;
 	
@@ -257,9 +259,6 @@ function stationWindows(g){
 	l_sta=station_info.length;
 	
 	windowMsg=station_info[g]['name']+"<br/><br/>";
-
-
-	
 	
 	for(j=0; j<l_mbta; j++){
 		plat_key=mbtaInfo[j]['PlatformKey'];

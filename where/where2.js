@@ -16,6 +16,7 @@
     map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);	
 
 	getMyLocation()	
+	showPosition(position)
 	CharactersInit()	
 	StationLocations()	
 

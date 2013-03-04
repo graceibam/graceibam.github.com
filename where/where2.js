@@ -16,9 +16,7 @@
     map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);	
 
 	getMyLocation()	
-	showPosition(position)
-	CharactersInit()	
-	StationLocations()	
+	
 
 }
 
@@ -49,6 +47,9 @@ function showPosition(position)
 		
 		g_message="Here I am!"+"<br/><br/>"+"My Location: "+"<br/>"+g_lat+" Latitude"+"<br/>"+g_lng+" Longitude";
 		addInfoWindow(g_marker, g_message);
+		
+	CharactersInit()	
+	StationLocations()
   }
         /* if (navigator.geolocation) {
             // the navigator.geolocation object is supported on your browser

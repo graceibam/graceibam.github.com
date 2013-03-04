@@ -10,15 +10,12 @@
     };	
 	
     map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);	
-	
+
+	getMyLocation()	
 	CharactersInit()	
 	StationLocations()	
-	getMyLocation()
-	
-	map.panTo(g_location);
-	
 
-  }
+}
 
   
   
@@ -33,6 +30,8 @@ function getMyLocation() {
 				
 		g_location=new google.maps.LatLng(g_lat, g_lng)
 		console.log(g_location);
+		
+		map.panTo(g_location);
 			
 		g_marker=new google.maps.Marker({
 			position:g_location,

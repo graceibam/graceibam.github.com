@@ -1,16 +1,16 @@
   
   function initialize() {
-	 me=new google.maps.LatLng(42.413413, -71.119738);
+	 centerOn=new google.maps.LatLng(42.413413, -71.119738);
 	//tom=new google.maps.LatLng(42.4060089, -71.1169065);
-    var mapOptions = {
-      center: g_location,
-      zoom: 13,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
+
     map = new google.maps.Map(document.getElementById("map_canvas"),
         mapOptions);
 		
-	map.panTo(g_location);
+	  var mapOptions = {
+      center: centerOn,
+      zoom: 13,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };	
 	
 	//var marker=new google.maps.Marker({
 	//position:me,
@@ -29,6 +29,10 @@
 	
 	StationLocations()	
 	getMyLocation()
+	
+	map.panTo(g_location);
+	
+
   }
 
   

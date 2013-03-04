@@ -33,6 +33,7 @@ function getMyLocation() {
     }
   else{alert("Geolocation not supported!");}
   }
+  
 function showPosition(position)
   {
 		g_lat=position.coords.latitude;
@@ -78,7 +79,7 @@ function showPosition(position)
 		console.log(g_lng);
  */
 		
-    }
+    
   
 function toRad(deg){
 	return (deg*Math.PI/180);

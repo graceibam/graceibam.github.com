@@ -27,12 +27,29 @@
 	
 	CharactersInit()
 	
-	StationLocations()
-  
-	
+	StationLocations()	
+	getMyLocation()
   }
 
-
+function getMyLocation() {
+        lat = 0;
+        lng = 0;
+        if (navigator.geolocation) {
+            // the navigator.geolocation object is supported on your browser
+            navigator.geolocation.getCurrentPosition(function(position) {
+                lat = position.coords.latitude;
+                lng = position.coords.longitude;
+               // elem = document.getElementById("loc");
+                //elem.innerHTML = "<h1>You are in " + lat + ", " + lng + "</h1>";
+			console.log(lat);
+			console.log(lng);
+            });
+        }
+        else {
+            alert("Geolocation is not supported by your web browser.  What a shame!");
+        }
+    }
+  
 function toRad(deg){
 	return (deg*Math.PI/180);
 }

@@ -1,4 +1,8 @@
   
+  var g_location
+  var g_lat
+  var g_lng
+  
   function initialize() {
 	 centerOn=new google.maps.LatLng(42.413413, -71.119738);
 

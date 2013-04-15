@@ -8,12 +8,16 @@
 		console.log(score);
 		$("#username").val('');
 		$("#score").val('');
+		var date=new Date();
+		var game_title="frogger";
 		
-		var input={'username':nombre, 'score':score};
+		var input={'game_title':game_title,'username':nombre, 'score':score, 'created_at':date};
 		
 		var url = 'http://gentle-castle-5723.herokuapp.com/submit.json';
 		var xhr = createCORSRequest('GET', url);
 		xhr.send();
+		
+		
 		
 		$.post('http://gentle-castle-5723.herokuapp.com/submit.json', input);		
 		

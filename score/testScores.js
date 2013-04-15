@@ -9,7 +9,7 @@
 		$("#username").val('');
 		$("#score").val('');
 		
-		$.post("gentle-castle-5723.herokuapp.com/submit.json", {'username':nombre, 'score':score});
+		$.post("http://gentle-castle-5723.herokuapp.com/submit.json", {'username':nombre, 'score':score});
 	  });
 });
 

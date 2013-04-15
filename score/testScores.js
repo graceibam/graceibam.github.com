@@ -10,11 +10,10 @@
 		$("#score").val('');
 		
 		var url = 'http://gentle-castle-5723.herokuapp.com/submit.json';
-		//var xhr = createCORSRequest('GET', url);
-		//xhr.send();
+		var xhr = createCORSRequest('GET', url);
+		xhr.send();
 		
-		createCORSRequest("get", url);
-			$.post("http://gentle-castle-5723.herokuapp.com/submit.json", {'username':nombre, 'score':score});
+		$.post("http://gentle-castle-5723.herokuapp.com/submit.json", {'username':nombre, 'score':score});
 	
 		
 		

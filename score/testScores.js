@@ -13,7 +13,7 @@
 		var xhr = createCORSRequest('GET', url);
 		xhr.send();
 		
-		$.post('http://gentle-castle-5723.herokuapp.com/submit.json', {'username':'nombre', 'score':'score'});		
+		$.post('http://gentle-castle-5723.herokuapp.com/submit.json', {'username':nombre, 'score':$("#score").val()});		
 		
 	  });
 });

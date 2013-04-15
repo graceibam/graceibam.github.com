@@ -10,10 +10,18 @@
 		$("#score").val('');
 		
 		var url = 'http://gentle-castle-5723.herokuapp.com/submit.json';
-		var xhr = createCORSRequest('GET', url);
-		xhr.send();
+		//var xhr = createCORSRequest('GET', url);
+		//xhr.send();
 		
-		$.post("http://gentle-castle-5723.herokuapp.com/submit.json", {'username':nombre, 'score':score});
+		var xhr = new XMLHttpRequest();
+		xhr.open("get", url, true);
+		xhr.onload = function(){
+			$.post("http://gentle-castle-5723.herokuapp.com/submit.json", {'username':nombre, 'score':score});
+			//do something
+		};
+		xhr.send(null);
+		
+		
 	  });
 });
 

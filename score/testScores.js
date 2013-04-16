@@ -3,7 +3,7 @@
 	 $("#subScores").click(function(){
 		
 		var nombre=$("#username").val();
-		var score=11//$("#score").val();
+		var score=$("#score").val();
 		console.log(nombre);
 		console.log(score);
 		$("#username").val('');

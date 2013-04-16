@@ -3,12 +3,12 @@
 	 $("#subScores").click(function(){
 		
 		var nombre=$("#username").val();
-		var score=$("#score").val();
+		var score=100//$("#score").val();
 		console.log(nombre);
 		console.log(score);
 		$("#username").val('');
 		$("#score").val('');
-		var date=new Date();
+		var date = new Date();
 		var game_title="frogger";
 		
 		var input={'game_title':game_title,'username':nombre, 'score':score, 'created_at':date};
@@ -16,8 +16,6 @@
 		var url = 'http://gentle-castle-5723.herokuapp.com/submit.json';
 		var xhr = createCORSRequest('GET', url);
 		xhr.send();
-		
-		
 		
 		$.post('http://gentle-castle-5723.herokuapp.com/submit.json', input);		
 		
